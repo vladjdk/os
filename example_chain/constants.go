@@ -15,4 +15,6 @@ const (
 
 	// SixDecimalsChainID is the chain ID for the 6 decimals chain.
 	SixDecimalsChainID = "ossix_9002"
+
+	CosmosChainID = "cosmos_262144"
 )

@@ -53,6 +53,10 @@ type emptyAppOptions struct{}
 
 func (ao emptyAppOptions) Get(_ string) interface{} { return nil }
 
+func NoOpEvmosAppOptions(_ string) error {
+	return nil
+}
+
 // NewRootCmd creates a new root command for osd. It is called once in the
 // main function.
 func NewRootCmd() *cobra.Command {
@@ -65,7 +69,7 @@ func NewRootCmd() *cobra.Command {
 		nil,
 		true,
 		emptyAppOptions{},
-		example_chain.EvmosAppOptions,
+		NoOpEvmosAppOptions,
 	)
 
 	encodingConfig := sdktestutil.TestEncodingConfig{

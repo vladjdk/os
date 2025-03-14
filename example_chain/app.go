@@ -142,7 +142,7 @@ func init() {
 	}
 }
 
-const appName = "os"
+const appName = "osd"
 
 var (
 	// DefaultNodeHome default home directories for the application daemon
